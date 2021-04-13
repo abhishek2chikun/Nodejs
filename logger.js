@@ -1,14 +1,22 @@
+const Event = require('events');
+
 var url ='http://mylogger.io/log';
-console.log(module)
-//console.log(__dirname)
-function display(message)
+
+class Logger extends Event
 {
-    //sent http request
-    console.log(message)
+    display(message)
+    {
+        //sent http request
+        console.log(message)
+
+
+        //Raise a event
+        this.emit('Speaking',{id:1,url:'htps://'})
+
+
+    }
+    
 }
-  
 
-
-module.exports=display;
+module.exports=Logger;
 module.exports.Link=url;
-module.exports.x=display

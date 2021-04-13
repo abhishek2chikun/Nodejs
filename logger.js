@@ -1,7 +1,7 @@
 var url ='http://mylogger.io/log';
 console.log(module)
 //console.log(__dirname)
-function x(message)
+function display(message)
 {
     //sent http request
     console.log(message)
@@ -9,6 +9,6 @@ function x(message)
   
 
 
-module.exports=x;
+module.exports=display;
 module.exports.Link=url;
-import os
+module.exports.x=display

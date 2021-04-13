@@ -1,5 +1,10 @@
-const os=require('os')
-var tm=os.totalmem()
-var fm=os.freemem()
-console.log("Available Memory=",tm-fm)
-console.log(`Free Memory ${fm}`)
+const logger = require('./logger');
+
+var link = logger.Link
+
+console.log("This is the link from logger:"+link)
+
+logger("Hello, this is abhishek")
+
+
+logger.x("Node is cool")
